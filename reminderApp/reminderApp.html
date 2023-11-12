@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reminder App</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+        <div class="sideBar">
+            <div class="search">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="menu_list">
+                <ul class="side-bar" id="menu">
+                    <li>Reminders <span class="contentNo">2</span></li>
+                    <li class="active">To Do List <span class="contentNo">5</span></li>
+                    <li> Shopping List <span class="contentNo">10</span></li>
+                    <li>Other <span class="contentNo">5</span></li>
+                </ul>
+            </div>
+        </div>
+        <div  class="menuContent" id="menu_listContent">
+            <!-- remindersList -->
+            <div class="reminders list">
+                <div class="firstReminder">
+                    <h3 class="rHeading" role="heading">Reminders</h3>
+                    <ul id="content">
+                        <li class="checked">Wash Your Plates</li>
+                        <li>Read the book titled "Living Great"</li>
+                    </ul>
+                </div>
+                <div class="secondReminder">
+                    <h3 class="rHeading"  role="heading">Important</h3>
+                    <ul id="content">
+                        <li>Order for Light and Cottons top</li>
+                        <li>Get Konkere design rading table</li>
+                        <li class="checked">Play ball with Chelsea fans</li>
+                        <li>Get a new Sneakers</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- todoList -->
+            <div class="todoList list">
+                <div class="firstReminder">
+                    <h3 class="rHeading" role="heading">Reminders </h3>
+                    <ul class="content">
+                        <li class="checked">Sleep</li>
+                        <li>Practice Yoga</li>
+                        <li class="checked">Take a shower</li>
+                        <li>Go for a walk</li>
+                    </ul>
+                </div>
+                <div class="secondReminder">
+                    <h3 class="rHeading" role="heading">Treat with importance</h3>
+                    <ul id="content">
+                        <li class="checked">Go through your WhatsApp message</li>
+                        <li>Read your YouVersion Devotion</li>
+                        <li>Work on your Javascript</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- shopping list -->
+            <div class="shopping list">
+                <div class="firstReminder">
+                    <h3 class="rHeading">Groceries</h3>
+                    <ul id="content">
+                        <li>Youghurt</li>
+                        <li class="checked">Vegetables</li>
+                        <li class="checked">Corn flakes</li>
+                        <li>Peanut Butter</li>
+                        <li class="checked">Onions</li>
+                        <li>Chocolates</li>
+                        <li>Orange juice</li>
+                        <li>Cake</li>
+                    </ul>
+                </div>
+                <div class="secondReminder">
+                    <h3 class="rHeading">Fruit</h3>
+                    <ul id="content">
+                        <li>Apples</li>
+                        <li>Orange</li>
+                        <li class="checked">Banana</li>
+                        <li>Pineapples</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- others list -->
+            <div class="others list">
+                <div class="firstReminder">
+                    <h3 class="rHeading">Reminders</h3>
+                    <ul id="content">
+                        <li>Sleep and Sleep</li>
+                        <li>Watch Kdrama's</li>
+                    </ul>
+                </div>
+                <div class="secondReminder">
+                    <h3 class="rHeading">Books</h3>
+                    <ul id="content">
+                        <li>Living Good</li>
+                        <li>Prosperity</li>
+                        <li class="checked">Enjoying life</li>
+                        <li>Soft work</li>
+                    </ul>
+                </div>
+                <div class="thirdReminder">
+                    <h3 class="rHeading">Important</h3>
+                    <ul id="content">
+                        <li>Attend Devfest 2029</li>
+                        <li class="checked">Watch Youtube Video on The Experience</li>
+                        <li class="checked">Read a book</li>
+                        <li>Watch Arsenal Match</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./remiderApp.js"></script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:content-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #191d23;
+    width:100%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', sans-serif
+}
+.wrapper{
+    padding: 2rem;
+    margin: 96px auto;
+    background-color: #23262c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 7px 0px 13px 1px rgba(18, 18, 18, 0.597);
+    border-radius: 14px;
+}
+.wrapper hr{
+    width:100%;
+    border-style: none;
+    border:1px solid #3b3f4969;
+}
+.wrapper #followers{
+    display: flex;
+    align-items: center;
+    justify-content: space-between!important;
+}
+.wrapper #followers:not(:last-child){
+    margin-bottom: 1rem;
+}
+.wrapper #followers:not(:first-child){
+    margin-top: 1rem;
+}
+#followers img{
+    width:100px;
+    height:100px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+}
+.wrapper #followers .info{
+    margin-left: 2rem;
+}
+#followers .info .profile h4{
+    color: white;
+
+}
+#followers .info .profile small{
+    color:#656e81 ;
+    font-size: 14px;
+}
+#followers .info .buttons{
+    margin: 12px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+}
+#followers .info .buttons i{
+    margin-right:3px;
+    font-size: .6rem;
+}
+#followers .info .buttons button:nth-child(1){
+    border-style: none;
+    width:6rem;
+    height:2rem;
+    border:2px solid #ef4100;
+    background-color: transparent;
+    color:white;
+    border-top-left-radius: 28px;
+    border-bottom-left-radius:28px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+}
+#followers .info .buttons .follow-btn::after{
+    content: "Follow";
+}
+#followers .info .buttons button:nth-child(2){
+    border-style: none;
+    width:6rem;
+    height:2rem;
+    border:2px solid transparent;
+    background-color: #ef4100;
+    color:white;
+    border-top-right-radius: 28px;
+    border-bottom-right-radius: 28px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', sans-serif
+}
+#followers .info .buttons button.follow-btn.active {
+    background-color: #d83c03;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+#followers .info .buttons .follow-btn.active::after{
+    content: "Following";
+}
+#followers .info .buttons .follow-btn.active i::after{
+    display: none;
+}

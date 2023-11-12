@@ -1,4 +1,4 @@
-const starRating = document.querySelectorAll('.star-rating .star')
+const starRating = document.querySelectorAll('.star-rating .star');
 
 starRating.forEach((item, idx)=> {
     item.addEventListener('click', function(){

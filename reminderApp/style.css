@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    height:100%;
+    background-color:rgb(189 91 45);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.container{
+    max-width: 60%;
+    margin:4rem auto;
+    display: grid;
+    grid-template-columns: 1.5fr 4fr;
+    height: 80vh;
+}
+/* side bar */
+.container .sideBar{
+    padding:20px 0 36px;
+    height:80vh;
+    color:white;
+    background-color:rgb(19 19 24);
+
+}
+.container .sideBar .search{
+    padding: 8px 12px ;
+}
+.container .sideBar .search input{
+    width: 100%;
+    padding: 14px 24px ;
+    border-radius: 20px;
+    border-style: none;
+    background-color: rgb(48, 48, 59);
+}
+.menu_list ul {margin-top: 18px;}
+.menu_list ul li{
+    list-style-type: none;
+    padding: 10px 22px;
+    font-size: 15px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    cursor: pointer;
+}
+.menu_list ul li span{
+    width:26px;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    background-color: rgb(48, 48, 59);
+    border-radius: 9px;
+    font-size: 12px;
+}
+.menu_list ul li.active{
+    background-color: white;
+    color:black;
+}
+.menu_list ul li.active span{
+    color: white;
+}
+.menu_list ul li+li{
+    margin-top: 6px;
+}
+
+/* sideBar content */
+.container .menuContent{
+    background-color: white;
+    padding: 2rem 0;
+}
+.menuContent .list h3{
+    text-transform: uppercase;
+    background-color: rgb(197, 197, 197);
+    padding: 6px 36px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menuContent .list h3::after{
+    content: "\22EE";
+    font-size: 1.2rem;
+}
+.menuContent .list ul li{
+    list-style-type: none;
+    font-size: 15px;
+    padding-left:36px;
+    padding-top:14px;
+    cursor: pointer;
+}
+.menuContent .list ul li.checked{
+    color:#888;
+    text-decoration: line-through;
+}
+.menuContent .list .secondReminder{
+    margin-top: 14px;
+}
+.menuContent .list .thirdReminder{
+    margin-top: 12px;
+}
+
+/* .menuContent .todoList {display:none} */
+.menuContent .shopping {display:none}
+.menuContent .reminders {display:none}
+
+.menuContent .others{
+    display:none;
+}
+
+
+
+
+
+
+
+
+
+
+/* .menu_list ul button{
+    background-image: linear-gradient(to top, yellow 50%, transparent 50%);
+    background-size: 100% 200%;
+    border: 2px solid transparent;
+    background-position: top;
+    color:black;
+    transition: background-position 0.5s ease-in-out;
+}
+.menu_list ul button:hover{
+    background-position: bottom;
+} */

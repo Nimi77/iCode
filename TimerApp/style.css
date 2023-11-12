@@ -1,0 +1,124 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image:linear-gradient(0deg,  rgba(1, 61, 34, 0.9),  
+    rgba(2, 108, 25, 0.62)), url(https://w0.peakpx.com/wallpaper/473/515/HD-wallpaper-awesome-nature-best-nature-cool-nature-nice-view-sunset.jpg);
+    height:100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:cursive;
+}
+.container{
+    width:70%;
+    margin:4rem 0;
+}
+#notification h2{
+    color:#ffff;
+    font-size: 2rem;
+    margin-bottom: .6rem;
+}
+#notification span{
+    color: #fff;
+}
+#tripTime{
+    display: flex;
+    margin:2.5rem 0 2.2rem;
+}   
+#tripTime .timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1.6rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+#tripTime .timer span{
+    font-size: 3rem;
+    padding: 1rem 0;
+    margin-bottom: 12px;
+    width:9rem;
+    height:9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3d7f57a3;
+    color: #f7f7f7;
+    box-shadow:rgb(74 201 122) 1px 2px 4px 0px;
+    font-weight: 800;
+}
+#tripTime .timer small{
+    color: white;
+    font-size: 1rem;
+}
+#timing .day span{
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+}
+#timing .sec span{
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+#note p{
+    color: white;
+    font-size: 15px;
+    line-height: 1.8rem;
+    width:75%;
+}
+@media only screen and (max-width: 980px) {
+    #note p{
+        width:100%;
+     
+    }
+}
+@media only screen and (max-width: 800px) {
+    .container{
+        width:50%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    #note p{
+        width:100%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    #tripTime .timer span{
+        font-size: 2rem;
+        width:6rem;
+        height:6rem;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .container{
+        margin:0 2rem;
+    }
+    #notification h2{
+        color:#ffff;
+        font-size: 1.6rem;
+        margin-bottom: .6rem;
+    }
+    #tripTime .timer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 1.2rem;
+    }
+    #tripTime .timer span{
+        font-size: 1.6rem;
+        width:5rem;
+        height:5rem;
+    }
+    #tripTime .timer small{font-size: 12px;}
+    #note p{
+        width:95%;
+        font-size: 12px;
+        line-height: 1.5rem;
+    }
+}
