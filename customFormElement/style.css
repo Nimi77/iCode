@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(77, 1, 77);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+h3{
+    margin-bottom: 24px;
+    font-size: 14px;
+    font-weight: 200;
+} 
+.firstRow{
+    display: flex;
+    margin-bottom: 16px;
+    gap:14px;
+}
+.firstRow .rating1{
+    background-color: rgb(255, 85, 0);
+    padding: 2rem 1.2rem;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:48vh;
+    height:20vh;
+    border-radius: 8px;
+    position: relative;
+}
+.rating1 .r1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.rating1 .r1 small{
+    margin-top: 12px;
+}
+.rating1 .audio > span{
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    height:36px;
+    width: 36px;
+    border-radius: 20px;
+    background-color: #f5f5f5ad;
+
+}
+.rating1 .audio > span i{
+    color:rgb(255, 85, 0);
+    z-index: 1;
+}
+.rating1 .video > span{
+    padding: 10px;
+    height:36px;
+    width: 36px;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rating1 .video span .smallCirc{
+    background-color: rgb(255, 85, 0);
+    border-radius: 12px;
+    padding:6px;
+    z-index: 2;
+}
+.firstRow .rating1 hr{
+    width:178px;
+    border: 1px solid #fff;
+    margin-left:38px;
+    margin-bottom: 27px;
+    position: absolute;
+}
+.rating1 .performance > span{
+    padding: 8px;
+    height:36px;
+    width: 36px;
+    border-radius: 20px;
+    background-color: #f5f5f5ad;
+}
+/* star rating  */
+.firstRow .rating2{
+    background-color: rgb(255, 38, 27);
+    color: white; 
+    width:48vh;
+    height:20vh;
+    padding: 1.2rem;
+    border-radius: 8px;
+}
+.rating2 .star-rating{
+    display: flex;
+    grid-gap: 0.6rem;
+}
+.star-rating .star{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.star-rating .star:hover{
+    transform: scale(1.1);
+}
+.star-rating .star.active{
+
+    animation: animate .5s calc(var(--i)) ease-in-out forwards;
+}
+@keyframes  animate {
+    0%{
+  
+        transform: scale(1);
+    }
+    50%{
+   
+        transform: scale(1.2);
+    }
+    100%{
+  
+        transform: scale(1);
+    }
+}
+.secondRow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:14px;
+}
+
+/* number rating */
+.secondRow .rating3{
+    width:49vh;
+    height:32vh;
+    padding:1.2rem ;
+    background-color: rgb(194, 5, 125);
+    color: white;
+    border-radius: 8px;
+}
+.rating3 #scroll{display: flex;}
+.rating3 #scroll > span.active {
+    background-color: #ffff;
+    padding: 0 2px;
+    display: block;
+    width: 73px;
+    height:4px;
+    border-radius: 12px;
+    margin-bottom: .9rem;
+}
+.rating3 #scroll > span:nth-child(2){
+    padding: 0 2px;
+    display: block;
+    width: 73px; 
+    height:4px;
+    border:1px solid white;
+    border-radius: 12px;
+    margin-left: 10px;
+}
+.rating3 .numbers{
+    display: flex;
+    grid-gap:14px;
+    flex-direction: column;
+}
+.first-set, .second-set{
+    display: flex;
+    justify-content: space-between;
+}
+.rating3 .numbers .first-set > span{
+    padding: 8px;
+    width:38px;
+    height:38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgb(206, 25, 140);
+    cursor: pointer;
+}
+.rating3 .numbers .second-set > span{
+    padding: 8px;
+    width:38px;
+    height:38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgb(206, 25, 140) ;
+    cursor: pointer;
+}
+.rating3 .numbers .second-set > span + span{
+    margin-left: 15px;
+}
+/* checkbox */
+.secondRow .rating4{
+    background-color: rgb(57, 6, 108);
+    color: white;
+    width:48vh;
+    height:32vh;
+    padding: 1.2rem;
+    border-radius: 8px;
+}
+.rating4 .checkbox{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+.rating4 .checkbox > span{
+    display: flex;
+    align-items: center;
+}
+.rating4 .checkbox > span + span{
+    margin-top: 14px;
+}
+.rating4 .checkbox .check{
+    margin-right: 12px;
+
+}
