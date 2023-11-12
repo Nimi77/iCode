@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(39, 39, 39);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-height: 70%;
+  margin: 5% auto;
+  overflow: hidden;
+}
+.card {
+  background-color: rgb(39, 39, 39);
+  box-shadow: inset -2px 1px 4px 0px rgb(18 18 18 / 73%);
+  transition: 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.card + .card,
+.card {
+  margin-right: 1.2rem;
+}
+.card:hover {
+  box-shadow: 7px 0px 13px 1px rgba(18, 18, 18, 0.597);
+}
+.card .upper-section {
+  padding: 28px 20px;
+  color: white;
+  border-bottom: 2px solid rgb(198, 129, 0);
+}
+.upper-section .icon {
+  color: rgb(198, 129, 0);
+  font-size: 2rem;
+  margin: 14px 0 18px;
+}
+.upper-section h3 {
+  color: rgb(255 175 27);
+  text-transform: uppercase;
+  margin: 20px 0 12px;
+  font-weight: 300;
+}
+.upper-section p {
+  line-height: 1.4rem;
+}
+.upper-section .ribbon-wrap {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: -38px;
+  right: -9px;
+  pointer-events: none;
+  overflow: hidden;
+}
+.ribbon-wrap .ribbon {
+  width: 230px;
+  text-align: center;
+  padding: 10px 0;
+  top: 30%;
+  left: -16px;
+  transform: rotate(28deg);
+  position: absolute;
+}
+#startingUp .ribbon {
+  background-color: rgb(50, 50, 255);
+  color: white;
+}
+#growingBiz .ribbon {
+  background-color: rgb(127, 2, 81);
+  color: white;
+}
+#enterprise .ribbon {
+  background-color: rgb(184, 2, 2);
+  color: white;
+}
+
+.card .lower-section {
+  background-color: rgb(22, 22, 22);
+  padding: 28px 20px 24px;
+}
+.feature-listing ul {
+  color: white;
+  list-style: none;
+}
+ul > li {
+  margin-bottom: 18px;
+}
+ul > li i {
+  margin-right: 8px;
+  color: rgb(255 175 27);
+}
+.lower-section .select-btn {
+  display: inline-block;
+  border-style: none;
+  background-color: rgb(18, 16, 16);
+  width: 100%;
+  margin: 16px 0 10px;
+  padding: 15px;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  color: rgb(255 175 27);
+  border-radius: 4px;
+  transition: all 500ms ease-in-out;
+  position: relative;
+}
+.select-btn:hover {
+  background-color: rgb(198, 129, 0);
+  color: white;
+}
+
+/* Javascript Styling */
+.card.active#startingUp .upper-section {
+  background-color: rgb(22, 22, 22);
+  border-bottom: 2px solid rgb(50, 50, 255);
+}
+.card.active#startingUp .upper-section .icon {
+  color: rgb(50, 50, 255);
+}
+.card.active#startingUp .upper-section .section-heading {
+  color: rgb(50, 50, 255);
+}
+.card.active#startingUp .lower-section .features i {
+  color: rgb(50, 50, 255);
+}
+.card.active#startingUp .lower-section .startupBtn {
+  background-color: rgb(50, 50, 255);
+  color: #fff;
+}
+
+.card.active#growingBiz .upper-section {
+  background-color: rgb(22, 22, 22);
+  border-bottom: 2px solid rgb(223, 4, 142);
+}
+.card.active#growingBiz .upper-section .icon {
+  color: rgb(223, 4, 142);
+}
+.card.active#growingBiz .upper-section .section-heading {
+  color: rgb(223, 4, 142);
+}
+.card.active#growingBiz .lower-section .features i {
+  color: rgb(223, 4, 142);
+}
+.card.active#growingBiz .lower-section .growingBizBtn {
+  background-color: rgb(127, 2, 81);
+  color: #fff;
+}
+
+.card.active#enterprise .upper-section {
+  background-color: rgb(22, 22, 22);
+  border-bottom: 2px solid rgb(241, 6, 6);
+}
+.card.active#enterprise .upper-section .icon {
+  color: rgb(241, 6, 6);
+}
+.card.active#enterprise .upper-section .section-heading {
+  color: rgb(241, 6, 6);
+}
+.card.active#enterprise .lower-section .features i {
+  color: rgb(241, 6, 6);
+}
+.card.active#enterprise .lower-section .enterpriseBtn {
+  background-color: rgb(184, 2, 2);
+  color: #fff;
+}
+
+@media only screen and (max-width: 850px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding: 20px;
+    grid-gap: 40px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    grid-gap: 20px;
+  }
+}
