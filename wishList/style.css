@@ -1,0 +1,129 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #6671D6;
+    font-family: 'PT Sans', sans-serif;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 48%;
+    background-color: #ffff;
+    margin: 50px auto;
+}
+.wrapper header{
+    padding: 20px;
+    background-color: #eeee;
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper header h4{
+    text-transform: uppercase;
+}
+.wrapper header aside{
+    font-size: 14px;
+}
+header .action button{
+    width: 8rem;
+    height: 2rem;
+    border-style: none;
+    color:#2568c0;
+    
+    background-color: #fff;
+    box-shadow: rgb(201 206 253) 1px 2px 3px 0px;
+    font-family:'PT Sans', sans-serif; ;
+}
+#wishList{    
+    background-color: #FBFDFF;
+    margin: 16px 16px 37px;
+    display: flex;
+    flex-direction: column; 
+    gap:16px;
+}
+#wishList .list {
+    box-shadow: rgb(201 206 253) 1px 2px 3px 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding-left:10px;
+    padding-right: 10px;
+}
+.list .delete{
+    color:#0000;
+    font-size: 16px;
+}
+#wishList .list .listContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    
+}
+.listContent figure {
+        margin:10px 0 16px;
+        display:flex;  
+        justify-content: center;
+        align-items: center;                                 
+}
+figure figcaption span{
+    color: #4e5cd7;
+    font-weight: 600;
+  
+}
+figure figcaption p {
+    width:92%;
+    font-size: 14px;
+    padding-top: 4px;
+}
+.listContent .pricing {
+    text-align: right;
+    align-items: right;
+}
+.listContent .pricing span{
+    font-weight: bold;
+
+}
+.listContent .pricing button{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 2.2rem;
+    margin-top:4px ;
+    font-size: 14px;
+    background: linear-gradient(90deg, rgb(156 45 231) 0%, rgb(205 88 217) 100%);
+    border-radius: 18px;
+    border-style: none;
+    color:#fff;
+    cursor: pointer;
+    font-family: 'PT Sans', sans-serif;
+}
+.listContent .pricing button .fa-solid{
+    padding-right: 4px;
+    font-size: 10px;
+}
+@media only screen and (max-width:900px){
+    #wishList{ 
+    display: grid;
+    }
+    .listContent{
+        width:fit-content;
+    }
+    .figure img{
+        width:90px;
+        height:80px;
+    }
+    figure .wishTitle{
+        font-size: 14=5px;
+    }
+    figure figcaption p{
+        font-size: 13px;
+    }
+}
