@@ -1,0 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #e9ebff;
+    font-family: 'PT Sans', sans-serif;
+}
+.container{
+    background-color: #fff;
+    box-shadow: rgb(201 206 253) 1px 2px 3px 0px;
+}
