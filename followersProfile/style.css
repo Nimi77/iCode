@@ -4,22 +4,20 @@
     box-sizing:content-box;
 }
 body{
+    background-color: #1f1f1f;
     display: flex;
+    align-items: center;
     justify-content: center;
-    background-color: #191d23;
-    width:100%;
+    height: 100vh;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', sans-serif
 }
 .wrapper{
-    padding: 2rem;
-    margin:80px auto;
-    background-color: #23262c;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 7px 0px 13px 1px rgba(18, 18, 18, 0.597);
-    border-radius: 14px;
+    height: 430px;
+    max-width: 400px;
+    padding: 1rem 2rem;
+    border-radius: 0.4em;
+    background-color: #282828;
+    box-shadow: 0 10px 10px 3px rgb(23, 20, 20);
 }
 .wrapper hr{
     width:100%;
@@ -62,9 +60,14 @@ body{
     align-items: center;
     grid-gap: 10px;
 }
-#followers .info .buttons i{
-    margin-right:3px;
+#followers .info .buttons button i{
+    margin-right:8px;
     font-size: .6rem;
+}
+#followers .info .buttons button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #followers .info .buttons button:nth-child(1){
     border-style: none;
@@ -75,7 +78,16 @@ body{
     color:white;
     border-top-left-radius: 28px;
     border-bottom-left-radius:28px;
+    transition: .7s;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+}
+#followers .info .buttons button:nth-child(1):hover{
+    color: white;
+    background-color: #ef4100;
+    border-top-left-radius: 28px;
+    border-bottom-left-radius:28px;
+    font-size: 12px;
+    border-color: #ef4100;
 }
 #followers .info .buttons .follow-btn::after{
     content: "Follow";
@@ -89,8 +101,17 @@ body{
     color:white;
     border-top-right-radius: 28px;
     border-bottom-right-radius: 28px;
+    transition: .7s;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', sans-serif
 }
+#followers .info .buttons button:nth-child(2):hover{
+    color: white;
+    background-color: orangered;
+    border-bottom-right-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+    font-size: 12px;
+}
+
 #followers .info .buttons button.follow-btn.active {
     background-color: #d83c03;
     border-top-right-radius: 0px;
