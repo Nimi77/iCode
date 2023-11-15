@@ -12,7 +12,7 @@ body{
 }
 .wrapper{
     padding: 2rem;
-    margin: 96px auto;
+    margin:80px auto;
     background-color: #23262c;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@ body{
 }
 #followers img{
     width:100px;
-    height:100px;
+    height:110px;
     border-top-right-radius: 24px;
     border-bottom-right-radius: 24px;
     border-bottom-left-radius: 24px;
