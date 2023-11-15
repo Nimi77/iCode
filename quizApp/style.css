@@ -9,8 +9,102 @@
 body{
     background-color: #e9ebff;
     font-family: 'PT Sans', sans-serif;
+
 }
 .container{
+    max-width: 50%;
+    width:45%;
+    margin:60px auto;
     background-color: #fff;
     box-shadow: rgb(201 206 253) 1px 2px 3px 0px;
+}
+.container .options {
+    height:5.3rem;
+    padding:14px 0 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    background:linear-gradient(90deg, rgba(8,141,191,1) 0%,
+    rgb(0 210 253) 99%);
+}
+.options .answers span:first-child{
+    margin-right: 12px;
+}
+.options .answers span i{
+    margin-right:4px;
+}
+.options .timer i{
+    margin-right:4px;
+}
+.container .quiz-box{
+    padding:0 4rem 2rem;
+}
+.quiz-box .quiz-card{
+    background-color: #fff;
+    box-shadow: rgb(201 206 253) 1px 2px 3px 0px;
+    padding: 1.2rem 2rem;
+    position: relative;
+    margin-top: -14px
+}
+.quiz-card .questionSection > span{
+    color: #b9b7b7;
+}
+.quiz-card .questionSection #question{
+    padding: 18px 0 22px;
+}
+.quiz-card .answerSection>span{
+    color: #acabab;
+}
+.quiz-card .answerSection ul{
+    padding:.6rem 0;
+    list-style-type:none ;
+}
+.quiz-card .answerSection ul li{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.quiz-card .answerSection ul li{
+    padding: 8px 10px;
+    transition: all .5s ease-out;
+}
+.quiz-card .answerSection ul li span{
+    margin-right:8px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.quiz-card .answerSection ul li:hover{
+    background:linear-gradient(90deg, rgba(8,141,191,1) 0%,
+    rgb(0 210 253) 99%);
+    border-radius: 8px;   
+    color: #fff;
+}
+.quiz-box .answers-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:2rem;
+}
+.quiz-box .answers-btn button{
+    width:8.4rem;
+    height:2.4rem;
+    border-style: none;
+    background: none;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: .6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.quiz-box .answers-btn #ansLater{
+    border: 1px solid rgb(7 146 195);
+    color: rgb(7 146 195);
+    margin-right:12px;
+}
+.quiz-box .answers-btn #sendAnswer{
+    background-color: rgb(7 146 195);
+    color: #fff;
 }
