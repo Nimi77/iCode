@@ -1,0 +1,295 @@
+:root {
+  --main-bg: rgb(25, 25, 25);
+  --plan-card-bg: hsla(0, 0%, 12%, 1);
+  --bg-upper-card: hsla(0, 0%, 19%, 1);
+  --bg-upper-card-hover: hsla(195, 94%, 69%, 0.5);
+  --features-bg-card: hsla(0, 0%, 12%, 1);
+  --bg-info: hsla(173, 76%, 94%, 1);
+  --bg-wave-1: hsla(0, 0%, 16%, 1);
+  --bg-wave-2: hsla(0, 0%, 14%, 1);
+  --bg-wave-3-card: hsla(0, 0%, 12%, 1);
+  --box-shadow: hsla(0, 0%, 0%, 0.4);
+  --hover-gradient-left: hsla(282, 25%, 66%, 1);
+  --hover-gradient-right: hsla(195, 94%, 69%, 1);
+  --gradient-right: hsla(356, 84%, 65%, 1);
+  --gradient-left: hsla(340, 83%, 66%, 1);
+  --btn-bg-card: hsla(0, 0%, 12%, 1);
+  --clr-bg-card: hsla(0, 0%, 12%, 1);
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+svg {
+  display: block;
+  max-width: 100%;
+}
+body {
+  display: grid;
+  place-content: center;
+  user-select: none;
+  overflow-x: hidden;
+  background-color: var(--main-bg);
+}
+.pricingContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  margin-block: 3rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  padding-inline-start: 2rem;
+  padding-inline-end: 1rem;
+}
+.pricingContainer .planCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 21rem;
+  background-color: var(--plan-card-bg);
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 20px var(--box-shadow);
+  transition: all 0.4s ease-in-out, border 0.25s 0.25s ease-in-out;
+  overflow: hidden;
+  padding-block-end: 2rem;
+}
+.planCard:hover {
+  transform: scale(1.1);
+  z-index: 9;
+}
+.planCard .upperCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 14rem;
+  padding-block-start: 2.8rem;
+  background-color: var(--bg-upper-card);
+}
+.planCard .upperCard:after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--bg-upper-card-hover) 80%,
+    var(--bg-upper-card-hover) 100%
+  );
+  will-change: opacity;
+  transition: opacity 0.25s 1000ms ease-in-out;
+  opacity: 0;
+  z-index: -1;
+}
+.planCard:hover .upperCard:after {
+  opacity: 1;
+}
+.upperCard .price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.price h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 0.2rem;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;;
+  text-transform: uppercase;
+  background: linear-gradient(
+    90deg,
+    var(--gradient-left) 20%,
+    var(--gradient-right) 100%
+  );
+  color: #e45364;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.planCard:hover .price h2 {
+  background: linear-gradient(
+    90deg,
+    var(--hover-gradient-left) 20%,
+    var(--hover-gradient-right) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.price > h2 small {
+  margin-block-start: -0.4rem;
+  font-size: 0.9rem;
+  text-transform: lowercase;
+}
+.price > span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-family: "Trebuchet MS", sans-serif;
+  background: linear-gradient(
+    90deg,
+    var(--gradient-left) 20%,
+    var(--gradient-right) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.planCard:hover .price > span {
+  background: linear-gradient(
+    90deg,
+    var(--hover-gradient-left) 20%,
+    var(--hover-gradient-right) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.upperCard .wave {
+  width: 101%;
+  height: 5rem;
+  overflow: hidden;
+}
+.wave svg path {
+  stroke: transparent;
+  will-change: stroke;
+  transition: stroke 0.25s 0.25s ease-in-out;
+}
+.planCard:hover svg path {
+  stroke-dasharray: 1700;
+  stroke-dashoffset: 1700;
+  animation: strokeShowUp 1s 0.25s linear forwards;
+}
+.wave svg:nth-child(2) {
+  position: relative;
+  top: -4rem;
+}
+.wave svg:nth-child(3) {
+  position: relative;
+  top: -8.2rem;
+}
+.planCard:hover .wave svg:nth-child(1) path {
+  stroke: var(--hover-gradient-right);
+}
+.planCard:hover .wave svg:nth-child(2) path {
+  stroke: var(--hover-gradient-left);
+}
+.planCard:hover .wave svg:nth-child(3) path {
+  width: 120%;
+  stroke: var(--hover-gradient-right);
+}
+
+.lowerCard{
+  background-color: var(--features-bg-card);
+}
+.planCard .features {
+  position: relative;
+  top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  padding: 3rem 0 4rem;
+  list-style: none;
+  z-index: 999;
+}
+.features li {
+  color: rgb(228, 225, 225);
+  will-change: color;
+  transition: color 0.25s ease-in-out;
+}
+.features li:hover {
+  color: var(--hover-gradient-right);
+}
+.planCard:hover .features li{
+  font-size: .9rem;
+}
+.planCard .choose-btn {
+  width: 150px;
+  height: 40px;
+  font-size: .8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  background:
+  linear-gradient(var(--clr-bg-card), var(--clr-bg-card)) padding-box,
+  linear-gradient(to right, var(--gradient-left) 10%, var(--gradient-right) 40%, var(--gradient-right) 100%) border-box;
+  font-family: "Trebuchet MS", sans-serif;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  transition: 0.5s all ease-in;
+  z-index: 2;
+  cursor: pointer;
+}
+.choose-btn:hover {
+  animation: bgMove 1s linear infinite forwards;
+  background:
+  linear-gradient(var(--btn-bg-card), var(--btn-bg-card)) padding-box,
+  linear-gradient(to right, var(--hover-gradient-right) 0%, var(--hover-gradient-left) 30%, var(--hover-gradient-right) 60%, var(--hover-gradient-right) 100%) border-box;     
+}
+.choose-btn span{
+  color: #e45364;
+}
+.planCard:hover .choose-btn {
+  background:
+  linear-gradient(var(--clr-bg-card), var(--clr-bg-card)) padding-box,
+  linear-gradient(to right, var(--hover-gradient-right) 0%, var(--hover-gradient-left) 30%, var(--hover-gradient-right) 60%, var(--hover-gradient-right) 100%) border-box; 
+  background-size:  200% 200%;  
+}
+.planCard:hover .choose-btn span  {
+  background: linear-gradient(to right, var(--hover-gradient-right) 0%, var(--hover-gradient-left) 30%, var(--hover-gradient-right) 60%, var(--hover-gradient-right) 100%);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes bgMove {
+
+  0% {
+      background-position: 200% 100%;
+  }
+
+  100% {
+      background-position: 10% 0%;
+  }
+}
+
+@keyframes strokeShowUp {
+to {
+  stroke-dashoffset: 0;
+}
+}
+
+@media only screen and (max-width: 916px) {
+  .pricingContainer {
+    width: 800px;
+    gap: 12px;
+  }
+}
+@media only screen and (max-width: 813px) {
+  .pricingContainer {
+    display: grid;
+    grid-gap: 22px;
+  }
+}
+@media (max-width: 40rem) {
+  .pricingContainer {
+      gap: 3rem;
+  }
+  .planCard:hover {
+      transform: scale(1);  
+  }
+}
