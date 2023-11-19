@@ -117,60 +117,71 @@ ul > li i {
 }
 
 /* Javascript Styling */
+
 .card.active#startingUp .upper-section {
   background-color: rgb(22, 22, 22);
   border-bottom: 2px solid rgb(50, 50, 255);
+
+  & .icon{
+    color: rgb(50, 50, 255);
+  }
+  & .section-heading{
+    color: rgb(50, 50, 255);
+  }
 }
-.card.active#startingUp .upper-section .icon {
+.card.active#startingUp .lower-section{
+  & .features i {
   color: rgb(50, 50, 255);
-}
-.card.active#startingUp .upper-section .section-heading {
-  color: rgb(50, 50, 255);
-}
-.card.active#startingUp .lower-section .features i {
-  color: rgb(50, 50, 255);
-}
-.card.active#startingUp .lower-section .startupBtn {
+  }
+  & .startupBtn {
   background-color: rgb(50, 50, 255);
   color: #fff;
-}
+  }
 
+}
+  
 .card.active#growingBiz .upper-section {
   background-color: rgb(22, 22, 22);
   border-bottom: 2px solid rgb(223, 4, 142);
+
+  & .icon{
+    color: rgb(223, 4, 142);
+  }
+  & .section-heading{
+    color: rgb(223, 4, 142);
+  }
 }
-.card.active#growingBiz .upper-section .icon {
+.card.active#growingBiz .lower-section{
+  & .features i {
   color: rgb(223, 4, 142);
-}
-.card.active#growingBiz .upper-section .section-heading {
-  color: rgb(223, 4, 142);
-}
-.card.active#growingBiz .lower-section .features i {
-  color: rgb(223, 4, 142);
-}
-.card.active#growingBiz .lower-section .growingBizBtn {
+  } 
+  & .growingBizBtn {
   background-color: rgb(127, 2, 81);
-  color: #fff;
-}
+  color: #fff; 
+  }
+} 
 
 .card.active#enterprise .upper-section {
   background-color: rgb(22, 22, 22);
   border-bottom: 2px solid rgb(241, 6, 6);
-}
-.card.active#enterprise .upper-section .icon {
+
+  & .icon {
   color: rgb(241, 6, 6);
-}
-.card.active#enterprise .upper-section .section-heading {
+  }
+  & .section-heading {
   color: rgb(241, 6, 6);
+  }
 }
-.card.active#enterprise .lower-section .features i {
+.card.active#enterprise .lower-section{
+  & .features i {
   color: rgb(241, 6, 6);
-}
-.card.active#enterprise .lower-section .enterpriseBtn {
+  }
+  & .enterpriseBtn {
   background-color: rgb(184, 2, 2);
   color: #fff;
-}
-
+  }
+} 
+ 
 @media only screen and (max-width: 850px) {
   .card-container {
     display: grid;
