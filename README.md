@@ -1,6 +1,6 @@
 
 ## Coding Challenge
-This repository comprises of the coding challenge i participated in iCodeThis.com to sharpen my coding skill and get my hands on writing Javascript to add more functonalities to a design. This is my first step to bulding a real project with Javascript.
+This repository comprises of the coding challenge I participated in iCodeThis.com to sharpen my coding skill and get my hands on writing Javascript to add more functonalities to a design. This is my first step to bulding a real project with Javascript.
 
 
 ## Lessons Learned
