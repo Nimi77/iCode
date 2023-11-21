@@ -112,7 +112,7 @@ body{
     font-size: 12px;
 }
 
-#followers .info .buttons button.follow-btn.active {
+#followers .info .buttons .follow-btn.active {
     background-color: #d83c03;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -120,6 +120,6 @@ body{
 #followers .info .buttons .follow-btn.active::after{
     content: "Following";
 }
-#followers .info .buttons .follow-btn.active i::after{
+#followers .info .buttons .follow-btn.active i{
     display: none;
 }

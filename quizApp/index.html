@@ -11,25 +11,29 @@
   <link rel="stylesheet" href="/quizApp/style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="quiz">
         <div class="options">
             <div class="answers" role="heading">
                 <span><i class="fa-solid fa-check"></i>2 Correct</span>
                 <span><i class="fa-solid fa-xmark"></i>1 Wrong</span>
             </div>
             <div class="timer">
-                <span><i class="fa-regular fas fa-clock"></i>25:05</span>
+                <span class="icon"><i class="fas fa-stopwatch fa-lg fa-fw"></i></span>
+                <span class="time-elapsed">0:30</span> 
             </div>
         </div>
-        <div class="quiz-box">
+        <section class="quiz-box" id="quiz">
             <div class="quiz-card">
                 <div class="questionSection">
-                    <span>Question 1 (14 remaining)</span>
-                    <p id="question">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quam corrupti libero aut magnam beatae odit iusto.</p>
+                    <span class="question">Question
+                        <span id="questNo">1</span>  
+                        <span id="remaining-question">(14 remaining)</span>
+                    </span>
+                    <p id="question-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quam corrupti libero aut magnam beatae odit iusto.</p>
                 </div>
                 <div class="answerSection">
                     <span>Answer options</span>
-                    <ul>
+                    <ul id="answer-options">
                         <li><span>A</span>Venimu Remia Timoari</li>
                         <li><span>B</span>Timury Emaiy Romio</li>
                         <li><span>C</span>Cassano Vicenso Rin</li>
@@ -38,12 +42,10 @@
                 </div>
             </div>
             <div class="answers-btn">
-                <button id="ansLater">Answer Later</button>
-                <button id="sendAnswer">Send Answer</button>
+                <button class="skip" onclick="skipQues()">Answer Later</button>
+                <button class="submit" onclick="sendAns()">Send Answer</button>
             </div>
-        </div>
-
-       
+        </section>
     </div>
 </body>
 </html>

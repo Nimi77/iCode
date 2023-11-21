@@ -12,8 +12,7 @@ body{
     max-width: 60%;
     margin:4rem auto;
     display: grid;
-    grid-template-columns: 1.5fr 4fr;
-    height: 80vh;
+    grid-template-columns: 1fr 4fr;
 }
 /* side bar */
 .container .sideBar{
@@ -21,7 +20,7 @@ body{
     height:80vh;
     color:white;
     background-color:rgb(19 19 24);
-
+    width:13rem;
 }
 .container .sideBar .search{
     padding: 8px 12px ;
@@ -33,8 +32,8 @@ body{
     border-style: none;
     background-color: rgb(48, 48, 59);
 }
-.menu_list ul {margin-top: 18px;}
-.menu_list ul li{
+.menuList ul {margin-top: 18px;}
+.menuList ul li{
     list-style-type: none;
     padding: 10px 22px;
     font-size: 15px;
@@ -44,7 +43,7 @@ body{
     color: white;
     cursor: pointer;
 }
-.menu_list ul li span{
+.menuList ul li span{
     width:26px;
     display: flex;
     justify-content: center;
@@ -53,14 +52,14 @@ body{
     border-radius: 9px;
     font-size: 12px;
 }
-.menu_list ul li.active{
+.menuList ul li.active{
     background-color: white;
     color:black;
 }
-.menu_list ul li.active span{
+.menuList ul li.active span{
     color: white;
 }
-.menu_list ul li+li{
+.menuList ul li+li{
     margin-top: 6px;
 }
 
@@ -89,7 +88,7 @@ body{
     padding-top:14px;
     cursor: pointer;
 }
-.menuContent .list ul li.checked{
+.menuContent .list li.checked{
     color:#888;
     text-decoration: line-through;
 }
@@ -108,23 +107,47 @@ body{
     display:none;
 }
 
+@media screen and (max-width:800px){
+    .container .sideBar{
+        padding:20px 0 36px;
+    }
+    .container .sideBar .search input{
+        width: 100%;
+        padding: 10px 16px ;
+    }
+    .menuList ul li{
+        font-size: 12px;
+    }
 
-
-
-
-
-
-
-
-
-/* .menu_list ul button{
-    background-image: linear-gradient(to top, yellow 50%, transparent 50%);
-    background-size: 100% 200%;
-    border: 2px solid transparent;
-    background-position: top;
-    color:black;
-    transition: background-position 0.5s ease-in-out;
+    .menuContent .list h3{
+        font-size: 12px;
+    }
+    .menuContent .list h3::after{
+        content: "";
+    }
+    .menuContent .list ul li{
+        font-size: 12px;
+        width: fit-content;
+    }
 }
-.menu_list ul button:hover{
-    background-position: bottom;
-} */
+@media screen and (max-width:650px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr ;
+        height: auto;
+    }
+    .container .sideBar{
+        width: auto;
+        height:auto;
+    }
+    .menuList{
+        padding-block-start: 12px;
+        padding-block-end: 12px;
+    }
+    .menuContent .list h3{
+        padding-inline-start: 22px;
+    }
+    .menuContent .list ul li{
+       padding-inline-start: 22px;
+    }
+}

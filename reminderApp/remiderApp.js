@@ -1,10 +1,7 @@
+const list = document.querySelectorAll("li");
 
-var listContent = document.getElementById("content");
-listContent.addEventListener('click', function(e){
-    const target = e.target;
-    if(target.tagName === 'li'){
-        target.classList.toggle('checked');
-        console.log(listContent.includes('li'))
-        console.log("ttt")
-    }
-});
+for(i = 0; i < list.length; i++ ){
+    list[i].addEventListener("click", function(){
+        this.classList.toggle("checked");
+    })
+}
